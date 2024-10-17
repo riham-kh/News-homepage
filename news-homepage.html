@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>New Homepage</title>
+  </head>
+  <body>
+    <header>
+      <div><img class="header-logo" src="W-Logo.svg" alt="W logo" /></div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">New</a></li>
+          <li><a href="#">Popular</a></li>
+          <li><a href="#">Trending</a></li>
+          <li><a href="#">Categories</a></li>
+        </ul>
+      </nav>
+      <div id="mobile-nav">
+        <button id="open-menu-btn" class="mobile-menu-btn">
+          <img src="hamburger-menu.svg" alt="open-menu" />
+        </button>
+      </div>
+    </header>
+    <div id="mobile-menu" class="menu-hidden">
+      <div id="mobile-menu-wrapper">
+        <div class="close-btn-wrapper">
+          <button id="close-menu-btn" class="mobile-menu-btn">
+            <img src="close.svg" alt="close-menu" />
+          </button>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">New</a></li>
+            <li><a href="#">Popular</a></li>
+            <li><a href="#">Trending</a></li>
+            <li><a href="#">Categories</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <section>
+      <div id="main">
+        <div id="left-side">
+          <div>
+            <img
+              class="desktop-main-img"
+              src="vasilis-chatzopoulos-6lwyzronth8-unsplash.jpg"
+            />
+          </div>
+          <div>
+            <img class="mobile-main-img" src="mobile-mg.jpg" />
+          </div>
+          <div id="under-hero-img">
+            <h1 id="inner-left">The Bright Future of Web 3.0?</h1>
+            <div id="inner-right">
+              <p class="article-item">
+                We dive into the next evolution of the web that claims to put
+                the power of the platforms back into the hands of the people.
+                But is it really fulfilling its promise?
+              </p>
+              <button id="red-button">READ MORE</button>
+            </div>
+          </div>
+        </div>
+        <div id="right-side">
+          <h2>New</h2>
+          <div class="new-item">
+            <button class="heading-button">
+              <h3>Hydrogen VS Electric Cars</h3>
+            </button>
+            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+          </div>
+          <div class="new-item">
+            <button class="heading-button">
+              <h3>The Downsides of AI Artistry</h3>
+            </button>
+            <p>
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+          </div>
+          <div class="new-item">
+            <button class="heading-button">
+              <h3>Is VC Funding Drying Up?</h3>
+            </button>
+            <p>
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div id="other">
+        <div class="article-item">
+          <img src="Bitmap1.jpg" />
+          <div>
+            <p class="number">01</p>
+            <button class="title-button">
+              <p class="title">Reviving Retro PCs</p>
+            </button>
+            <p class="body-font">
+              What happens when old PCs are given modern upgrades?
+            </p>
+          </div>
+        </div>
+        <div class="article-item">
+          <img src="Bitmap2.jpg" />
+          <div>
+            <p class="number">02</p>
+            <button class="title-button">
+              <p class="title">Top 10 Laptops of 2022</p>
+            </button>
+            <p class="body-font">
+              Our best picks for various needs and budgets.
+            </p>
+          </div>
+        </div>
+        <div class="article-item">
+          <img src="Bitmap3.jpg" />
+          <div>
+            <p class="number">03</p>
+            <button class="title-button">
+              <p class="title">The Growth of Gaming</p>
+            </button>
+            <p class="body-font">
+              How the pandemic has sparked fresh opportunities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      let closeMenuBtn = document.getElementById("close-menu-btn");
+      let openMenuBtn = document.getElementById("open-menu-btn");
+      let mobileMenu = document.getElementById("mobile-menu");
+
+      openMenuBtn.addEventListener("click", () => {
+        if (mobileMenu.classList.contains("menu-hidden")) {
+          mobileMenu.classList.replace("menu-hidden", "menu-visible");
+        }
+      });
+
+      closeMenuBtn.addEventListener("click", () => {
+        if (mobileMenu.classList.contains("menu-visible")) {
+          mobileMenu.classList.replace("menu-visible", "menu-hidden");
+        }
+      });
+    </script>
+  </body>
+</html>
